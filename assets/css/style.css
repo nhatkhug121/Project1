@@ -41,8 +41,17 @@ a {
 }
 
 /* ========= header ========= */
+.fix-header {
+  padding-top: 26px;
+  position: sticky;
+  top: -26px;
+  background-color: #e6f0ff;
+  z-index: 1;
+}
 .header {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background: #e6f0ff;
   height: 100vh;
 }
@@ -50,7 +59,8 @@ a {
 .navbar {
   display: flex;
   align-items: center;
-  padding-top: 38px;
+  /* padding-top: 38px; */
+  padding: 12px 0;
 }
 
 .navbar ul {
@@ -607,12 +617,16 @@ a {
 }
 
 .footer .social-link {
+  background: #f9f9f9;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 28px;
   height: 28px;
   border-radius: 3px;
+}
+.footer .social-link + .social-link {
+  margin-left: 16px;
 }
 
 .footer .social-link:hover {
